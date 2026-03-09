@@ -32,7 +32,7 @@ export function GameCard({ game, accentColor }: GameCardProps) {
             </span>
           )}
         </div>
-        <p className="text-xs text-muted">{game.criador}</p>
+        <p className="text-xs text-muted">{game.criadorNome || game.criador || "Anônimo"}</p>
       </div>
     </div>
   );

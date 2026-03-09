@@ -7,7 +7,7 @@ import { EmptyState } from "@/components/shared/empty-state";
 import servicesData from "@/data/2altos/services.json";
 import type { ServiceProvider } from "@/lib/types";
 
-const providers: ServiceProvider[] = servicesData;
+const providers = servicesData as unknown as ServiceProvider[];
 
 export default function ServicosPage() {
   const [search, setSearch] = useState("");

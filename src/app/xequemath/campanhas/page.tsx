@@ -9,7 +9,7 @@ import { EmptyState } from "@/components/shared/empty-state";
 import campaignsData from "@/data/xequemath/campaigns.json";
 import type { Campaign, Category } from "@/lib/types";
 
-const campaigns: Campaign[] = campaignsData;
+const campaigns = campaignsData as unknown as Campaign[];
 const categories: Category[] = [
   { id: "Aritmetica", label: "Aritmetica", color: "#ef4444" },
   { id: "Algebra", label: "Algebra", color: "#3b82f6" },

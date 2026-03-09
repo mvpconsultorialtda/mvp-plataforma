@@ -2,6 +2,7 @@ import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
 import { formatCurrency, formatPercent } from "@/lib/utils";
 import type { Campaign } from "@/lib/types";
+import { daysRemaining } from "@/lib/firestore";
 import { Clock, Users } from "lucide-react";
 
 interface CampaignCardProps {
@@ -10,6 +11,8 @@ interface CampaignCardProps {
 }
 
 export function CampaignCard({ campaign, accentColor }: CampaignCardProps) {
+  const dias = campaign.diasRestantes ?? daysRemaining(campaign.dataFim);
+  const criador = campaign.criadorNome || campaign.criador || "Anônimo";
   return (
     <div className="bg-card border border-border rounded-xl overflow-hidden hover:border-primary transition-all hover:-translate-y-0.5">
       {campaign.imagem && (
@@ -34,8 +37,8 @@ export function CampaignCard({ campaign, accentColor }: CampaignCardProps) {
           <Progress value={campaign.percentual} color={accentColor} />
         </div>
         <div className="flex items-center gap-4 text-xs text-muted">
-          <span className="flex items-center gap-1"><Clock size={12} /> {campaign.diasRestantes} dias</span>
-          <span className="flex items-center gap-1"><Users size={12} /> {campaign.criador}</span>
+          <span className="flex items-center gap-1"><Clock size={12} /> {dias} dias</span>
+          <span className="flex items-center gap-1"><Users size={12} /> {criador}</span>
         </div>
       </div>
     </div>

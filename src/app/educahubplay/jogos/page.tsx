@@ -8,7 +8,7 @@ import { EmptyState } from "@/components/shared/empty-state";
 import gamesData from "@/data/educahubplay/games.json";
 import type { Game, Category } from "@/lib/types";
 
-const games: Game[] = gamesData;
+const games = gamesData as unknown as Game[];
 const categories: Category[] = [
   { id: "Ciencias", label: "Ciencias", color: "#10b981" },
   { id: "Portugues", label: "Portugues", color: "#3b82f6" },

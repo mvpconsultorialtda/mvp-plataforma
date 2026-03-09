@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useAuth } from "@/contexts/auth-context";
-import { LayoutGrid, LogIn, LogOut, User } from "lucide-react";
+import { LayoutGrid, LogIn, LogOut } from "lucide-react";
 
 const projects = [
   { slug: "2altos", name: "2Altos", color: "#f59e0b" },

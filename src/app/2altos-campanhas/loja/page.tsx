@@ -7,7 +7,7 @@ import { EmptyState } from "@/components/shared/empty-state";
 import gamesData from "@/data/2altos/games.json";
 import type { Game } from "@/lib/types";
 
-const games: Game[] = gamesData;
+const games = gamesData as unknown as Game[];
 
 export default function LojaAltPage() {
   const [search, setSearch] = useState("");

@@ -8,7 +8,7 @@ import { EmptyState } from "@/components/shared/empty-state";
 import campaignsData from "@/data/2altos/campaigns.json";
 import type { Campaign, Category } from "@/lib/types";
 
-const campaigns: Campaign[] = campaignsData;
+const campaigns = campaignsData as unknown as Campaign[];
 const categories: Category[] = [
   { id: "Estrategia", label: "Estrategia", color: "#92400e" },
   { id: "Cooperativo", label: "Cooperativo", color: "#065f46" },

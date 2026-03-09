@@ -8,7 +8,7 @@ import { EmptyState } from "@/components/shared/empty-state";
 import gamesData from "@/data/2altos/games.json";
 import type { Game, Category } from "@/lib/types";
 
-const games: Game[] = gamesData;
+const games = gamesData as unknown as Game[];
 const categories: Category[] = [
   { id: "Estrategia", label: "Estrategia", color: "#3b82f6" },
   { id: "Economia", label: "Economia", color: "#f59e0b" },
