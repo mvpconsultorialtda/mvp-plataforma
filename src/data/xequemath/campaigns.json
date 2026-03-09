@@ -1,0 +1,8 @@
+[
+  {"id": "1", "titulo": "Aritmetica Quest", "criador": "MathLab UNEB", "descricao": "Resolva problemas de aritmetica em uma aventura RPG com niveis progressivos de dificuldade.", "meta": 15000, "arrecadado": 12000, "percentual": 80, "diasRestantes": 10, "categoria": "Aritmetica"},
+  {"id": "2", "titulo": "Algebra Warriors", "criador": "Equacao Games", "descricao": "Batalha de equacoes! Resolva expressoes algebricas para derrotar inimigos.", "meta": 20000, "arrecadado": 8000, "percentual": 40, "diasRestantes": 20, "categoria": "Algebra"},
+  {"id": "3", "titulo": "GeoMaster 3D", "criador": "Forma Studio", "descricao": "Explore geometria espacial em 3D. Construa solidos e calcule areas e volumes.", "meta": 18000, "arrecadado": 16200, "percentual": 90, "diasRestantes": 5, "categoria": "Geometria"},
+  {"id": "4", "titulo": "Financas do Futuro", "criador": "EconoMath", "descricao": "Simulador de educacao financeira com juros compostos, investimentos e orcamento.", "meta": 25000, "arrecadado": 5000, "percentual": 20, "diasRestantes": 28, "categoria": "Financeira"},
+  {"id": "5", "titulo": "Estatistica na Pratica", "criador": "DataPlay", "descricao": "Colete dados, crie graficos e tire conclusoes em desafios do mundo real.", "meta": 12000, "arrecadado": 10800, "percentual": 90, "diasRestantes": 7, "categoria": "Estatistica"},
+  {"id": "6", "titulo": "XequeProblema", "criador": "ChessMath BR", "descricao": "Combine xadrez e matematica: cada peca resolve um tipo diferente de problema.", "meta": 30000, "arrecadado": 21000, "percentual": 70, "diasRestantes": 15, "categoria": "Logica"}
+]

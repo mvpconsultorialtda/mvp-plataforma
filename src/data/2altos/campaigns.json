@@ -1,0 +1,8 @@
+[
+  {"id": "1", "titulo": "Conquista dos Reinos", "criador": "GameMasters BR", "descricao": "Jogo estrategico de conquista territorial com mecanicas inovadoras de negociacao e aliancas.", "meta": 50000, "arrecadado": 37500, "percentual": 75, "diasRestantes": 15, "categoria": "Estrategia"},
+  {"id": "2", "titulo": "Floresta Encantada", "criador": "Meeple Arts", "descricao": "Jogo cooperativo de exploracao em uma floresta magica. Ideal para toda a familia.", "meta": 25000, "arrecadado": 22000, "percentual": 88, "diasRestantes": 8, "categoria": "Cooperativo"},
+  {"id": "3", "titulo": "Mercadores de Minas", "criador": "Tabula Rasa Games", "descricao": "Negociacao e comercio no Brasil colonial. Compre, venda e construa seu imperio.", "meta": 40000, "arrecadado": 12000, "percentual": 30, "diasRestantes": 25, "categoria": "Economia"},
+  {"id": "4", "titulo": "Arena dos Dragoes", "criador": "DiceForge Studio", "descricao": "Combate epico entre dragoes em um mundo de fantasia. Colecione e evolua seus dragoes.", "meta": 60000, "arrecadado": 45000, "percentual": 75, "diasRestantes": 12, "categoria": "Combate"},
+  {"id": "5", "titulo": "Trilha Selvagem", "criador": "NatureBR Games", "descricao": "Aventura pela fauna e flora brasileira. Educativo e divertido.", "meta": 20000, "arrecadado": 18500, "percentual": 92, "diasRestantes": 3, "categoria": "Educativo"},
+  {"id": "6", "titulo": "Cidade Futura", "criador": "UrbanPlay", "descricao": "Construa a cidade do futuro com sustentabilidade e inovacao.", "meta": 35000, "arrecadado": 7000, "percentual": 20, "diasRestantes": 30, "categoria": "Construcao"}
+]

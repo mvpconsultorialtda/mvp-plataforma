@@ -1,0 +1,8 @@
+[
+  {"id": "1", "titulo": "War Edicao Especial", "criador": "Grow", "descricao": "Classico jogo de estrategia militar em edicao especial com novas mecanicas.", "preco": 189.90, "avaliacao": 4.8, "numAvaliacoes": 234, "categoria": "Estrategia"},
+  {"id": "2", "titulo": "Banco Imobiliario Brasil", "criador": "Estrela", "descricao": "O classico jogo de compra e venda de propriedades com tematica brasileira.", "preco": 129.90, "avaliacao": 4.5, "numAvaliacoes": 567, "categoria": "Economia"},
+  {"id": "3", "titulo": "Catan Expansao", "criador": "Devir", "descricao": "Expansao para o famoso jogo de colonizacao. Novas ilhas e recursos.", "preco": 159.90, "avaliacao": 4.9, "numAvaliacoes": 892, "categoria": "Estrategia"},
+  {"id": "4", "titulo": "Dixit", "criador": "Galápagos", "descricao": "Jogo de criatividade e imaginacao com ilustracoes surreais.", "preco": 199.90, "avaliacao": 4.7, "numAvaliacoes": 445, "categoria": "Party"},
+  {"id": "5", "titulo": "Pandemic Legacy", "criador": "Z-Man Games", "descricao": "Versao legado do famoso jogo cooperativo de combate a doencas.", "preco": 299.90, "avaliacao": 4.9, "numAvaliacoes": 1203, "categoria": "Cooperativo"},
+  {"id": "6", "titulo": "Azul", "criador": "Plan B Games", "descricao": "Jogo abstrato de mosaicos com mecanicas elegantes e componentes de alta qualidade.", "preco": 219.90, "avaliacao": 4.8, "numAvaliacoes": 678, "categoria": "Abstrato"}
+]

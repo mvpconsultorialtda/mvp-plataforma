@@ -1,0 +1,8 @@
+[
+  {"id": "1", "titulo": "Eco Aventura", "criador": "EduGames BR", "descricao": "Jogo colaborativo sobre meio ambiente e sustentabilidade para criancas de 8 a 12 anos.", "avaliacao": 4.8, "numAvaliacoes": 156, "categoria": "Ciencias", "faixaEtaria": "8-12 anos"},
+  {"id": "2", "titulo": "Letrinhas Magicas", "criador": "Pedagogia Play", "descricao": "Alfabetizacao gamificada com desafios interativos de leitura e escrita.", "avaliacao": 4.9, "numAvaliacoes": 234, "categoria": "Portugues", "faixaEtaria": "6-8 anos"},
+  {"id": "3", "titulo": "Historia do Brasil Quiz", "criador": "HistoriaViva", "descricao": "Quiz interativo sobre historia do Brasil com cards colecionaveis de personagens historicos.", "avaliacao": 4.6, "numAvaliacoes": 89, "categoria": "Historia", "faixaEtaria": "10-14 anos"},
+  {"id": "4", "titulo": "Mundo das Fracoes", "criador": "MathPlay Studio", "descricao": "Aprenda fracoes de forma divertida com pizza, bolos e desafios matematicos.", "avaliacao": 4.7, "numAvaliacoes": 178, "categoria": "Matematica", "faixaEtaria": "9-11 anos"},
+  {"id": "5", "titulo": "Laboratorio Maluco", "criador": "ScienceKids", "descricao": "Experimentos virtuais de quimica e fisica em um laboratorio interativo.", "avaliacao": 4.5, "numAvaliacoes": 112, "categoria": "Ciencias", "faixaEtaria": "11-14 anos"},
+  {"id": "6", "titulo": "GeoExplorer", "criador": "MapaMundi Games", "descricao": "Explore os continentes, paises e culturas do mundo em uma aventura geografica.", "avaliacao": 4.8, "numAvaliacoes": 201, "categoria": "Geografia", "faixaEtaria": "10-14 anos"}
+]

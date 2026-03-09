@@ -1,0 +1,6 @@
+[
+  {"id": "1", "nome": "Ana Design Studio", "descricao": "Especialista em design grafico para jogos de tabuleiro, incluindo caixas, tabuleiros e cartas.", "categoria": "Design Grafico", "avaliacao": 4.9, "numAvaliacoes": 87, "tags": ["Ilustracao", "Caixas", "Cartas"], "localizacao": "Salvador, BA"},
+  {"id": "2", "nome": "Pedro Game Designer", "descricao": "Game designer com 10 anos de experiencia em jogos de tabuleiro e mecanicas de jogo.", "categoria": "Game Design", "avaliacao": 4.7, "numAvaliacoes": 43, "tags": ["Mecanicas", "Balanceamento", "Prototipagem"], "localizacao": "Sao Paulo, SP"},
+  {"id": "3", "nome": "3D Print Lab", "descricao": "Impressao 3D de prototipos e componentes personalizados para jogos de tabuleiro.", "categoria": "Impressao 3D", "avaliacao": 4.6, "numAvaliacoes": 65, "tags": ["Prototipos", "Miniaturas", "Componentes"], "localizacao": "Belo Horizonte, MG"},
+  {"id": "4", "nome": "Playtest Brasil", "descricao": "Grupo organizado de playtesters para validar mecanicas e balanceamento de jogos.", "categoria": "Playtest", "avaliacao": 4.8, "numAvaliacoes": 32, "tags": ["Testes", "Feedback", "Grupos"], "localizacao": "Rio de Janeiro, RJ"}
+]
