@@ -5,10 +5,9 @@ import { SearchBar } from "@/components/shared/search-bar";
 import { FilterBar } from "@/components/shared/filter-bar";
 import { CampaignCard } from "@/components/shared/campaign-card";
 import { EmptyState } from "@/components/shared/empty-state";
+import { useCollection } from "@/hooks/use-collection";
 import campaignsData from "@/data/2altos/campaigns.json";
 import type { Campaign, Category } from "@/lib/types";
-
-const campaigns = campaignsData as unknown as Campaign[];
 const categories: Category[] = [
   { id: "Estrategia", label: "Estrategia", color: "#92400e" },
   { id: "Cooperativo", label: "Cooperativo", color: "#065f46" },
@@ -17,8 +16,14 @@ const categories: Category[] = [
 ];
 
 export default function CampanhasAltPage() {
+  const { data: campaigns, loading } = useCollection<Campaign>("campaigns", {
+    mockData: campaignsData as unknown as Campaign[],
+    filters: [{ field: "projeto", op: "==", value: "2altos" }],
+  });
   const [search, setSearch] = useState("");
   const [filter, setFilter] = useState<string | null>(null);
+
+  if (loading) return <div className="text-center py-20 text-muted">Carregando...</div>;
 
   const filtered = campaigns.filter((c) => {
     const matchSearch = c.titulo.toLowerCase().includes(search.toLowerCase());

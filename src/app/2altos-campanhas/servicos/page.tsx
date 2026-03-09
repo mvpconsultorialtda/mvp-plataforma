@@ -4,13 +4,19 @@ import { useState } from "react";
 import { SearchBar } from "@/components/shared/search-bar";
 import { ServiceCard } from "@/components/shared/service-card";
 import { EmptyState } from "@/components/shared/empty-state";
+import { useCollection } from "@/hooks/use-collection";
 import servicesData from "@/data/2altos/services.json";
 import type { ServiceProvider } from "@/lib/types";
 
-const providers = servicesData as unknown as ServiceProvider[];
-
 export default function ServicosAltPage() {
+  const { data: providers, loading } = useCollection<ServiceProvider>("services", {
+    mockData: servicesData as unknown as ServiceProvider[],
+    filters: [{ field: "projeto", op: "==", value: "2altos" }],
+  });
   const [search, setSearch] = useState("");
+
+  if (loading) return <div className="text-center py-20 text-muted">Carregando...</div>;
+
   const filtered = providers.filter((p) => p.nome.toLowerCase().includes(search.toLowerCase()) || p.categoria.toLowerCase().includes(search.toLowerCase()));
 
   return (

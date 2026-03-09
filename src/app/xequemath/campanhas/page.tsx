@@ -6,10 +6,9 @@ import { FilterBar } from "@/components/shared/filter-bar";
 import { CampaignCard } from "@/components/shared/campaign-card";
 import { StatsGrid } from "@/components/shared/stats-grid";
 import { EmptyState } from "@/components/shared/empty-state";
+import { useCollection } from "@/hooks/use-collection";
 import campaignsData from "@/data/xequemath/campaigns.json";
 import type { Campaign, Category } from "@/lib/types";
-
-const campaigns = campaignsData as unknown as Campaign[];
 const categories: Category[] = [
   { id: "Aritmetica", label: "Aritmetica", color: "#ef4444" },
   { id: "Algebra", label: "Algebra", color: "#3b82f6" },
@@ -20,8 +19,14 @@ const categories: Category[] = [
 ];
 
 export default function CampanhasPage() {
+  const { data: campaigns, loading } = useCollection<Campaign>("campaigns", {
+    mockData: campaignsData as unknown as Campaign[],
+    filters: [{ field: "projeto", op: "==", value: "xequemath" }],
+  });
   const [search, setSearch] = useState("");
   const [filter, setFilter] = useState<string | null>(null);
+
+  if (loading) return <div className="text-center py-20 text-muted">Carregando...</div>;
 
   const filtered = campaigns.filter((c) => {
     const matchSearch = c.titulo.toLowerCase().includes(search.toLowerCase()) || c.descricao.toLowerCase().includes(search.toLowerCase());

@@ -5,10 +5,9 @@ import { SearchBar } from "@/components/shared/search-bar";
 import { FilterBar } from "@/components/shared/filter-bar";
 import { GameCard } from "@/components/shared/game-card";
 import { EmptyState } from "@/components/shared/empty-state";
+import { useCollection } from "@/hooks/use-collection";
 import gamesData from "@/data/educahubplay/games.json";
 import type { Game, Category } from "@/lib/types";
-
-const games = gamesData as unknown as Game[];
 const categories: Category[] = [
   { id: "Ciencias", label: "Ciencias", color: "#10b981" },
   { id: "Portugues", label: "Portugues", color: "#3b82f6" },
@@ -18,8 +17,14 @@ const categories: Category[] = [
 ];
 
 export default function JogosPage() {
+  const { data: games, loading } = useCollection<Game>("games", {
+    mockData: gamesData as unknown as Game[],
+    filters: [{ field: "projeto", op: "==", value: "educahubplay" }],
+  });
   const [search, setSearch] = useState("");
   const [filter, setFilter] = useState<string | null>(null);
+
+  if (loading) return <div className="text-center py-20 text-muted">Carregando...</div>;
 
   const filtered = games.filter((g) => {
     const matchSearch = g.titulo.toLowerCase().includes(search.toLowerCase());

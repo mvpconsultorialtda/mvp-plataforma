@@ -5,10 +5,9 @@ import { SearchBar } from "@/components/shared/search-bar";
 import { FilterBar } from "@/components/shared/filter-bar";
 import { GameCard } from "@/components/shared/game-card";
 import { EmptyState } from "@/components/shared/empty-state";
+import { useCollection } from "@/hooks/use-collection";
 import gamesData from "@/data/2altos/games.json";
 import type { Game, Category } from "@/lib/types";
-
-const games = gamesData as unknown as Game[];
 const categories: Category[] = [
   { id: "Estrategia", label: "Estrategia", color: "#3b82f6" },
   { id: "Economia", label: "Economia", color: "#f59e0b" },
@@ -18,8 +17,14 @@ const categories: Category[] = [
 ];
 
 export default function LojaPage() {
+  const { data: games, loading } = useCollection<Game>("games", {
+    mockData: gamesData as unknown as Game[],
+    filters: [{ field: "projeto", op: "==", value: "2altos" }],
+  });
   const [search, setSearch] = useState("");
   const [filter, setFilter] = useState<string | null>(null);
+
+  if (loading) return <div className="text-center py-20 text-muted">Carregando...</div>;
 
   const filtered = games.filter((g) => {
     const matchSearch = g.titulo.toLowerCase().includes(search.toLowerCase());

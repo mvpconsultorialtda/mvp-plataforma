@@ -4,13 +4,19 @@ import { useState } from "react";
 import { SearchBar } from "@/components/shared/search-bar";
 import { GameCard } from "@/components/shared/game-card";
 import { EmptyState } from "@/components/shared/empty-state";
+import { useCollection } from "@/hooks/use-collection";
 import gamesData from "@/data/2altos/games.json";
 import type { Game } from "@/lib/types";
 
-const games = gamesData as unknown as Game[];
-
 export default function LojaAltPage() {
+  const { data: games, loading } = useCollection<Game>("games", {
+    mockData: gamesData as unknown as Game[],
+    filters: [{ field: "projeto", op: "==", value: "2altos" }],
+  });
   const [search, setSearch] = useState("");
+
+  if (loading) return <div className="text-center py-20 text-muted">Carregando...</div>;
+
   const filtered = games.filter((g) => g.titulo.toLowerCase().includes(search.toLowerCase()));
 
   return (
