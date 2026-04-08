@@ -1,12 +1,27 @@
-import { Bot } from "lucide-react";
+"use client";
+
+import { AIChat } from "@/components/shared/ai-chat";
+
+const suggestions = [
+  "Crie um GDD para um jogo cooperativo sobre sustentabilidade",
+  "Sugira mecânicas para um jogo educativo de 2-4 jogadores",
+  "Descrição para campanha de crowdfunding de jogo de estratégia",
+  "Como balancear pontuação para um jogo infantil?",
+];
 
 export default function AssistentePage() {
   return (
-    <div className="text-center py-20 space-y-4">
-      <Bot size={48} className="mx-auto text-amber-500" />
-      <h1 className="text-2xl font-bold">Assistente IA</h1>
-      <p className="text-muted">Crie materiais graficos, balanceie mecanicas e gere ideias com IA.</p>
-      <p className="text-sm text-muted">Requer integracao com API de IA (Fase 4)</p>
+    <div className="space-y-4">
+      <div>
+        <h1 className="text-2xl font-bold">Assistente IA</h1>
+        <p className="text-muted text-sm">Crie materiais, balanceie mecânicas e gere ideias para jogos de tabuleiro</p>
+      </div>
+      <AIChat
+        platform="2altos"
+        accentColor="#f59e0b"
+        placeholder="Ex: Crie um jogo cooperativo sobre reciclagem para crianças de 8-12 anos..."
+        suggestions={suggestions}
+      />
     </div>
   );
 }
